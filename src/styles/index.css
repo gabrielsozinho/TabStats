@@ -113,15 +113,18 @@ body {
 
 .infos{
     display: flex;
+    margin-bottom: 0;
 }
 .info{
     font-weight: 500;
     margin-left: 15px;
     font-size: 1.1rem;
+    margin-bottom: 0;
 }
 
-.features, .createdDate{
+.features, .created-date, .updated-date{
     margin-left: 15px;
+    margin-top: 0;
     font-size: 1.2em;
 }
 .feature{
@@ -129,7 +132,11 @@ body {
     font-size: 1em;
 }
 
-.featuresText, .createdDateText{
+.created{
+    margin-top: 0;
+}
+
+.featuresText, .createdDateText, .updatedDateText{
     margin-bottom: 0;
 }
 

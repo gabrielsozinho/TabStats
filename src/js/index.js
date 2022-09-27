@@ -4,6 +4,8 @@ var content = document.querySelector('#info-container')
 var contentInfo = document.querySelector('#infos')
 var contentUsername = document.querySelector('#username-container')
 var contentFeatures = document.querySelector('#features')
+var contentDate = document.querySelector('#created-date')
+var contentUpdatedDate = document.querySelector('#updated-date')
 var refreshButton = document.querySelector('#refresh')
 
 refreshButton.addEventListener('click', function() {
@@ -49,6 +51,8 @@ function run() {
         createUsernameLine(username, `https://www.tabnews.com.br/${username}`)
 
         
+        formatDate(response.data.created_at)
+        formatUpdatedDate(response.data.updated_at)
 
         createInfoLine(`Tabcoins: ${response.data.tabcoins}`)
         createInfoLine(`Tabcash: ${response.data.tabcash}`)
@@ -67,6 +71,35 @@ function run() {
         
     })
 }
+
+function formatDate(date) {
+    var year = date.charAt(0) + date.charAt(1) + date.charAt(2) + date.charAt(3)
+    var month = date.charAt(5) + date.charAt(6)
+    var day = date.charAt(8) + date.charAt(9)
+
+    var info = document.createElement('p')
+    info.classList.add('a');
+    var text = document.createTextNode(`${day}/${month}/${year}`)
+    info.classList.add('created');
+
+    info.appendChild(text)
+    contentDate.appendChild(info)
+}
+
+function formatUpdatedDate(date) {
+    var year = date.charAt(0) + date.charAt(1) + date.charAt(2) + date.charAt(3)
+    var month = date.charAt(5) + date.charAt(6)
+    var day = date.charAt(8) + date.charAt(9)
+
+    var info = document.createElement('p')
+    info.classList.add('a');
+    var text = document.createTextNode(`${day}/${month}/${year}`)
+    info.classList.add('created');
+
+    info.appendChild(text)
+    contentUpdatedDate.appendChild(info)
+}
+
 
 function createLine(text) {
     var info = document.createElement('p')
