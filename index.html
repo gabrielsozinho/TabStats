@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/index.css">
+    <title>TabStats</title>
+    <meta name="description" content="Veja estatísticas de usuários do TabNews com o TabStats">
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon-light.ico" />
+</head>
+
+
+<body>
+
+    <header class="header">
+        <img src='./src/img/logo.svg' class='header-logo' />
+        <h1 className='headertext'>TabStats</h1>
+    </header>
+
+    <main>
+        <div class="form-container" id="form-container">
+            <form class="main-form">
+                <label class="form-label-username">Nome de usuário:</label>
+                <input type="text" autocomplete="username" class="form-input-username" id="username" />
+                <br />
+                <div
+                class="form-submit-button" id="button-get-form-data">Ver estatísticas</div>
+            </form>
+        </div>
+
+        <div class="info-container" id="info-container">
+            <div class="username-container" id="username-container"></div>
+            <div class="infos" id="infos"></div>
+            <div class="features" id="features"><h4 class="featuresText">Permissões:</h4></div>
+            <div class="createdDate"><h4 class="createdDateText">Conta criada em:</h4></div>
+            <div class="refresh-container">
+                <button id="refresh">Ver outro perfil</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+
+</html>
