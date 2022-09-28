@@ -1,4 +1,5 @@
 var submitButton = document.querySelector('#button-get-form-data')
+var formContainer = document.querySelector('#form-container')
 var usernameField = document.querySelector('#username')
 var content = document.querySelector('#info-container')
 var contentInfo = document.querySelector('#infos')
@@ -7,12 +8,10 @@ var contentFeatures = document.querySelector('#features')
 var contentDate = document.querySelector('#created-date')
 var contentUpdatedDate = document.querySelector('#updated-date')
 var refreshButton = document.querySelector('#refresh')
+var contentError = document.querySelector('#error-container')
+var contentErrorText = document.querySelector('#error-text')
 
 
-
-refreshButton.addEventListener('click', function() {
-    location.reload()
-})
 
 
 submitButton.addEventListener('click', run)
@@ -23,7 +22,7 @@ function run(event) {
     event.preventDefault();
     
     if (content.className == "open") {
-        content.className = "";
+        content.className = "closed";
     } else {
         content.className = "open"
     }
@@ -69,7 +68,7 @@ function run(event) {
         formElement.parentNode.removeChild(formElement);
     })
     .catch(function (error) {
-        createLine('Ops, parece que esse username não pertence a um usuário do TabNews!')
+        createErrorLine('Ops, parece que esse username não pertence a um usuário do TabNews!')
         
     })
 }
@@ -111,6 +110,19 @@ function createLine(text) {
     info.appendChild(text)
     content.appendChild(info)
 }
+
+function createErrorLine(text) {
+    var info = document.createElement('p')
+    info.classList.add('error');
+    var text = document.createTextNode(text)
+    
+    info.appendChild(text)
+    contentErrorText.appendChild(info)
+    contentError.classList.add('error-container-open')
+    content.className = "closed"
+    formContainer.className = "closed"
+}
+
 
 function createUsernameLine(text, userLink) {
     var info = document.createElement('a')

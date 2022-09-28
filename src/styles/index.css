@@ -110,6 +110,10 @@ a:hover{
     border-radius: 15px;
 }
 
+.closed{
+    display: none;
+}
+
 .username{
     display: inline-block;
     padding: 3px 7px;
@@ -155,6 +159,24 @@ a:hover{
     width: 100%;
 }
 
+.error-container{
+    margin: 0 auto;
+    max-width: 70em;
+    margin-top: 15%;
+    display: none;
+}
+
+.error-container-open{
+    display: block;
+}
+
+.error{
+    color: red;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
 .refresh-container button{
     padding: 5px 7px;
     margin-left: auto;
@@ -165,6 +187,11 @@ a:hover{
     color: rgb(255, 255, 255);
     background-color: #383838;
     
+}
+
+.refresh-container button a{
+    color: white;
+    text-decoration: none;
 }
 
 .refresh-container button:hover{

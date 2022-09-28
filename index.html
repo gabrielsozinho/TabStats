@@ -22,7 +22,7 @@
 
     <main>
         <div class="form-container" id="form-container">
-            <form class="main-form" onsubmit="run(event)">
+            <form class="main-form" onsubmit="run(event)" id="main-form">
                 <label class="form-label-username">Nome de usuário:</label>
                 <input type="text" autocomplete="username" class="form-input-username" id="username" />
                 <br />
@@ -38,7 +38,14 @@
             <div class="created-date" id="created-date"><h4 class="createdDateText">Conta criada em:</h4></div>
             <div class="updated-date" id="updated-date"><h4 class="updatedDateText">Editada pela última vez em:</h4></div>
             <div class="refresh-container">
-                <button id="refresh">Ver outro perfil</button>
+                <button id="refresh"><a href="./">Ver outro perfil</a></button>
+            </div>
+        </div>
+
+        <div class="error-container" id="error-container">
+            <div class="error-text" id="error-text"></div>
+            <div class="refresh-container">
+                <button id="refresh"><a href="./">Ver outro perfil</a></button>
             </div>
         </div>
 
