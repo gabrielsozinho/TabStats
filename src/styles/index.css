@@ -210,3 +210,38 @@ footer p{
     color: #696969;
     font-size: 0.9em;
 }
+
+@media screen and (max-width: 800px) {
+    
+    .form-container{
+        margin-top: 60%;
+    }
+
+    .main-form{
+        width: 80%;
+    }
+
+    .form-submit-button{
+        width: 93%;
+    }
+
+    .about{
+        max-width: 90rem;
+        margin-left: 20px;
+
+    }
+
+    .about-title{
+        margin-top: 200px;
+    }
+
+    .about-text{
+        font-size: 1em;
+    }
+
+    .open{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 45%;
+    }
+}
