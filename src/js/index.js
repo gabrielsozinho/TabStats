@@ -8,15 +8,6 @@ var contentDate = document.querySelector('#created-date')
 var contentUpdatedDate = document.querySelector('#updated-date')
 var refreshButton = document.querySelector('#refresh')
 
-const inputUsername = document.getElementById('username');
-inputUsername.addEventListener('keyup', function(e){
-    event.preventDefault();
-    var key = e.which || e.keyCode;
-    if (key == 13) { 
-        run()
-        
-    }
-});
 
 
 refreshButton.addEventListener('click', function() {
@@ -28,7 +19,7 @@ submitButton.addEventListener('click', run)
 
 
 
-function run() {
+function run(event) {
     event.preventDefault();
     
     if (content.className == "open") {
