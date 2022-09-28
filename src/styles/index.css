@@ -127,14 +127,14 @@ a:hover{
 .info{
     font-weight: 500;
     margin-left: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0;
 }
 
 .features, .created-date, .updated-date{
     margin-left: 15px;
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .feature{
     margin: 0;
@@ -190,9 +190,10 @@ a:hover{
 }
 
 .about-text{
-    font-size: 1.2em;
+    
     margin-top: 0px;
     margin-bottom: 5px;
+    font-weight: 400;
 }
 
 footer{
