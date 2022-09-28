@@ -7,6 +7,15 @@ body {
   
 }
 
+a{
+    color: rgb(9, 105, 218);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
 .header{
     display: flex;
     padding: 10px 15px;
@@ -95,7 +104,7 @@ body {
     max-width: 50em;
     align-items: center;
     justify-content: center;
-    margin-top: 13%;
+    margin-top: 10%;
     padding: 20px;
     border: 1px solid rgb(208, 215, 222);;
     border-radius: 15px;
@@ -166,4 +175,37 @@ body {
     color: #383838;
     background-color: white;
     cursor: pointer;
+}
+
+.about{
+    margin: 0 auto;
+    max-width: 70em;
+    padding: 0;
+    margin-top: 13%;
+}
+
+.about-title{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-text{
+    font-size: 1.1em;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+footer p{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #696969;
+    font-size: 0.9em;
 }
