@@ -2,7 +2,7 @@
 TabStats
 </h1>
 
-<p align="center"><img src="https://tabstats.ga/src/img/logo.svg" width="300" height="300"><p>
+<p align="center"><img src="https://tabstats.ga/src/img/logo.svg" width="300" height="300" style="background-color: white;"><p>
 <p>Um site open-source usado para visualizar informações de usuários do TabNews.</p>
 <h4 align="center"><a href="https://tabstats.ga">Clique para visitar o site</a></h4>
 <p align="center">Feito com ❤ por <a href="https://github.com/gabrielsozinho">Gabriel Sozinho</a> e <a href="https://github.com/gabrielsozinho/TabStats/graphs/contributors">contribuidores</a></p>
