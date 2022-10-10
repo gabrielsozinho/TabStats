@@ -194,6 +194,11 @@ a:hover{
     text-decoration: none;
 }
 
+.refresh-container button a:hover{
+    color: #383838;
+    text-decoration: none;
+}
+
 .refresh-container button:hover{
     padding: 5px 7px;
     transition: 0.5s;
