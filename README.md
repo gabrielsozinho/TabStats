@@ -7,7 +7,7 @@ TabStats
 <h4 align="center"><a href="https://tabstats.ga">Clique para visitar o site</a></h4>
 <p align="center">Feito com ❤ por <a href="https://github.com/gabrielsozinho">Gabriel Sozinho</a> e <a href="https://github.com/gabrielsozinho/TabStats/graphs/contributors">contribuidores</a></p>
 
-<img align="center" src="./src/img/pagespeed.png">
+<div align="center"><img align="center" src="./src/img/pagespeed.png"></div>
 <br>
 
 
