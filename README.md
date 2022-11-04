@@ -22,7 +22,7 @@ TabStats
 - Quantidade de publicações.
 - Quantidade de comentários.
 - Gráfico com informações de atividade.
-
+- Ranking de TabCoin e TabCash
 
 ## Tecnologias usadas:
 - HTML5
