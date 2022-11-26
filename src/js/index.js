@@ -39,7 +39,7 @@ function run(event) {
         "create:migration": "Criar migrações", 
         "update:content:others": "Editar conteúdos de outros usuários", 
         "ban:user": "Banir usuários",
-        "nuked": "Usuáriio banido"
+        "nuked": "Usuário banido"
     }
 
     var username = usernameField.value;
