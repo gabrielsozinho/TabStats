@@ -33,11 +33,13 @@ function run(event) {
         "create:content": "Publicar conteúdos", 
         "create:content:text_root": "Publicar conteúdos raízes",
         "create:content:text_child": "Publicar conteúdos filhos (comentários)", 
-        "update:content": "Atualizar conteúdos", "update:user": "Atualizar usuário",
+        "update:content": "Atualizar conteúdos", 
+        "update:user": "Atualizar usuário",
         "read:migration": "Ler migrações", 
         "create:migration": "Criar migrações", 
         "update:content:others": "Editar conteúdos de outros usuários", 
-        "ban:user": "Banir usuários"
+        "ban:user": "Banir usuários",
+        "nuked": "Usuáriio banido"
     }
 
     var username = usernameField.value;
