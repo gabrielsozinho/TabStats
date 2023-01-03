@@ -35,6 +35,8 @@ function run(event) {
         "ban:user": "Banir usuários",
         "nuked": "Usuário banido"
     }
+    
+    submitButton.classList.add('bloqued')
 
     var username = usernameField.value;
 

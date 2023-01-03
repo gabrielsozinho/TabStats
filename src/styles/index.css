@@ -95,6 +95,11 @@ a:hover{
     width: 95%;
 }
 
+.bloqued{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 .info-container{
     display: none;
 }
