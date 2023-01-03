@@ -20,24 +20,18 @@ submitButton.addEventListener('click', run)
 
 function run(event) {
     event.preventDefault();
-    
-    if (content.className == "open") {
-        content.className = "closed";
-    } else {
-        content.className = "open"
-    }
 
-    const features =  {
+    const features = {
         "read:session": "Ler sessão",
-        "create:session": "Criar sessão", 
-        "create:content": "Publicar conteúdos", 
+        "create:session": "Criar sessão",
+        "create:content": "Publicar conteúdos",
         "create:content:text_root": "Publicar conteúdos raízes",
-        "create:content:text_child": "Publicar conteúdos filhos (comentários)", 
-        "update:content": "Atualizar conteúdos", 
+        "create:content:text_child": "Publicar conteúdos filhos (comentários)",
+        "update:content": "Atualizar conteúdos",
         "update:user": "Atualizar usuário",
-        "read:migration": "Ler migrações", 
-        "create:migration": "Criar migrações", 
-        "update:content:others": "Editar conteúdos de outros usuários", 
+        "read:migration": "Ler migrações",
+        "create:migration": "Criar migrações",
+        "update:content:others": "Editar conteúdos de outros usuários",
         "ban:user": "Banir usuários",
         "nuked": "Usuário banido"
     }
@@ -45,34 +39,41 @@ function run(event) {
     var username = usernameField.value;
 
     axios.get(`https://www.tabnews.com.br/api/v1/users/${username}`)
-    .then(function (response) {
-        
-        if (response.data.erro) {
-            throw new Error('Username inválido')
-        }
+        .then(function (response) {
 
-        createUsernameLine(username, `https://www.tabnews.com.br/${username}`)
+            if (response.data.erro) {
+                throw new Error('Username inválido')
+            }
 
-        
-        formatDate(response.data.created_at)
-        formatUpdatedDate(response.data.updated_at)
+            createUsernameLine(username, `https://www.tabnews.com.br/${username}`)
 
-        createInfoLine(`Tabcoins: ${response.data.tabcoins}`)
-        createInfoLine(`Tabcash: ${response.data.tabcash}`)
 
-        response = response.data.features
+            formatDate(response.data.created_at)
+            formatUpdatedDate(response.data.updated_at)
 
-        for (let feature in response){
-            createFeatureLine( features[response[feature]] )
-        }
-        
-        var formElement = document.getElementById("form-container");
-        formElement.parentNode.removeChild(formElement);
-    })
-    .catch(function (error) {
-        createErrorLine('Ops, parece que esse username não pertence a um usuário do TabNews!')
-        
-    })
+            createInfoLine(`Tabcoins: ${response.data.tabcoins}`)
+            createInfoLine(`Tabcash: ${response.data.tabcash}`)
+
+            response = response.data.features
+
+            for (let feature in response) {
+                createFeatureLine(features[response[feature]])
+            }
+
+            var formElement = document.getElementById("form-container");
+            formElement.parentNode.removeChild(formElement);
+
+            if (content.className == "open") {
+                content.className = "closed";
+            } else {
+                content.className = "open"
+            }
+        })
+        .catch(function (error) {
+            createErrorLine('Ops, ocorreu um erro inesperado. Se isso persistir, verifique se esse username pertence a um usuário do TabNews!')
+
+        })
+
 }
 
 function formatDate(date) {
@@ -108,7 +109,7 @@ function createLine(text) {
     var info = document.createElement('p')
     info.classList.add('a');
     var text = document.createTextNode(text)
-    
+
     info.appendChild(text)
     content.appendChild(info)
 }
@@ -117,7 +118,7 @@ function createErrorLine(text) {
     var info = document.createElement('p')
     info.classList.add('error');
     var text = document.createTextNode(text)
-    
+
     info.appendChild(text)
     contentErrorText.appendChild(info)
     contentError.classList.add('error-container-open')
@@ -131,18 +132,18 @@ function createUsernameLine(text, userLink) {
     info.setAttribute('href', userLink);
     info.classList.add('username');
     var text = document.createTextNode(text)
-    
+
     info.appendChild(text)
     contentUsername.appendChild(info)
 
-    
+
 }
 
 function createInfoLine(text) {
     var info = document.createElement('p')
     info.classList.add('info');
     var text = document.createTextNode(text)
-    
+
     info.appendChild(text)
     contentInfo.appendChild(info)
 }
