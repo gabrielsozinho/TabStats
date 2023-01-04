@@ -42,6 +42,11 @@ function run(event) {
 
     axios.get(`https://www.tabnews.com.br/api/v1/users/${username}`)
         .then(function (response) {
+            axios.get(`https://www.tabnews.com.br/api/v1/contents/${username}`, {
+                headers: { 'User-Agent':'Mozilla/5.0' }
+              }).then(function (contentsResponse) {
+                    console.log(contentsResponse.headers)
+                })
 
             if (response.data.erro) {
                 throw new Error('Username inválido')
