@@ -36,9 +36,14 @@ function run(event) {
         "nuked": "Usuário banido"
     }
     
-    submitButton.classList.add('bloqued')
-
     var username = usernameField.value;
+    if (username.trim().length==0){
+        alert("Digite o nome do usuário!")
+        usernameField.focus()
+        return 
+    }
+
+    submitButton.classList.add('bloqued')
 
     axios.get(`https://www.tabnews.com.br/api/v1/users/${username}`)
         .then(function (response) {
