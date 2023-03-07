@@ -33,7 +33,8 @@ function run(event) {
         "create:migration": "Criar migrações",
         "update:content:others": "Editar conteúdos de outros usuários",
         "ban:user": "Banir usuários",
-        "nuked": "Usuário banido"
+        "nuked": "Usuário banido",
+        "create:recovery_token:username": "Solicitar recuperação de senha apenas com o username"
     }
     
     var username = usernameField.value;
